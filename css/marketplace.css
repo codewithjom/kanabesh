@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+  /* nav bar */
+  --brown: #B0814C;
+  --nav-background: #FEFAE0;
+  --green: #2B5B2E;
+  
+  /* background color */
+  --bg-primary: #2A4F2C;
+  --bg-secondary: #62612E;
+
+  /* text color */
+  --fc-primary: #EAD2AC;
+
+  /* fonts */
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #D2CA8E;
+}
+
+h1 {
+  color: var(--green);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: .1px;
+  text-transform: uppercase;
+}
+
+/* navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--nav-background);
+  padding: 16px 32px;
+  border-bottom: 3px solid var(--brown);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.60);
+  font-family: var(--ff-primary);
+}
+
+/* plants - Best Seller */
+img {
+  max-width: 20%;
+  display: block;
+  float: left;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+/* plants 
+#plant {}
+*/
+
+/* container inside the navigation bar */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* kanabesh */
+.kanabesh {
+  font-weight: bold;
+}
+
+/* icon beside kanabesh */
+.cannabis {
+  float: left;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+
+/* fancy things for div */
+.menu {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+}
+
+.menu a {
+  color: var(--green);
+  margin: 0px 14px;
+  font-weight: 100;
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  color: var(--nav-background);
+  background-color: var(--green);
+}
+
+/* indicates what link is active  */
+#active {
+  color: var(--nav-background);
+  background-color: var(--green);
+  margin: 0 14px;
+}
+
+/* background video */
+.background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* marketplace grid layout */
+.market-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+   'one'
+   'two'
+   'three'
+   'four'
+   'five';
+
+  padding-block: 5rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+
+/* article */
+.marketplace {
+  font-size: 0.8125rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px #000000;
+}
+
+.marketplace:hover {
+  box-shadow: 5px 5px 10px 3px #000000;
+}
+
+.flex {
+  margin-bottom: 20px;
+  font-family: var(--ff-primary);
+}
+
+#button {
+  float: right;
+  background-color: var(--brown);
+  color: var(--fc-primary);
+  margin: 5px;
+  padding: 8px 10px 8px 10px;
+  text-align: center;
+  border-style: none;
+  border-radius: 5px;
+}
+
+#button:hover {
+  background-color: #A4733D;
+  color: var(--fc-primary);
+}
+
+
+
+/* article background */
+.bg-primary {
+  background: var(--bg-primary);
+}
+
+.bg-secondary {
+  background: var(--bg-secondary);
+}
+
+.bg-neutral {
+  background: var(--bg-neutral);
+}
+
+
+/* article font color */
+.text-primary {
+  color: var(--fc-primary);
+}
+
+.description {
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+}
+
+
+.marketplace:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+  .market-grid {
+      grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .market-grid {
+    grid-template-areas:
+     'one one'
+     'two five'
+     'three five'
+     'four four';
+  }
+}
+
+
+.marketplace .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  font-family: var(--ff-primary);
+}
+
+.marketplace .price {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.marketplace > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.marketplace > p:last-of-type {
+  opacity: 0.7;
+}
