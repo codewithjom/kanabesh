@@ -52,19 +52,6 @@ nav {
   font-family: var(--ff-primary);
 }
 
-/* plants - Best Seller */
-img {
-  max-width: 20%;
-  display: block;
-  float: left;
-  border-radius: 10%;
-  margin-right: 30px;
-}
-
-/* plants 
-#plant {}
-*/
-
 /* container inside the navigation bar */
 .container {
   max-width: 700px;

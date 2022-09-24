@@ -1,40 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 :root {
+  /* nav bar */
   --brown: #B0814C;
-  --bar: #FEFAE0;
-  --fg: #2B5B2E;
+  --nav-background: #FEFAE0;
+  --green: #2B5B2E;
+  
+  /* background color */
+  --bg-primary: #2A4F2C;
+  --bg-secondary: #62612E;
+
+  /* text color */
+  --fc-primary: #EAD2AC;
+
+  /* fonts */
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: #E2DEC0;
+  background-color: #D2CA8E;
 }
 
 h1 {
-  color: var(--fg);
+  color: var(--green);
   font-size: 20px;
   font-weight: bold;
   letter-spacing: .1px;
   text-transform: uppercase;
 }
 
-.kanabesh {
-  font-weight: bold;
+/* navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--nav-background);
+  padding: 16px 32px;
+  border-bottom: 3px solid var(--brown);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.60);
+  font-family: var(--ff-primary);
 }
 
-.cannabis {
-  float: left;
-  height: 25px;
-  margin: 0 10px 0 0;
-}
-
+/* container inside the navigation bar */
 .container {
   max-width: 700px;
   margin: 0 auto;
@@ -43,18 +61,19 @@ h1 {
   justify-content: space-between;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background-color: var(--bar);
-  padding: 16px 32px;
-  border-bottom: 3px solid var(--brown);
-  box-shadow: 0 1px 10px rgba(0,0,0,0.60);
+/* kanabesh */
+.kanabesh {
+  font-weight: bold;
 }
 
+/* icon beside kanabesh */
+.cannabis {
+  float: left;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+
+/* nav links */
 .menu {
   display: flex;
   flex: 1 1 0%;
@@ -62,8 +81,8 @@ nav {
 }
 
 .menu a {
-  color: var(--fg);
-  margin: 0px 16px;
+  color: var(--green);
+  margin: 0px 14px;
   font-weight: 100;
   text-decoration: none;
   transition: 0.3s;
@@ -72,15 +91,77 @@ nav {
 }
 
 .menu a:hover {
-  color: var(--bar);
-  background-color: var(--fg);
+  color: var(--nav-background);
+  background-color: var(--green);
 }
 
+/* indicates what link is active  */
 #active {
-  color: var(--bar);
-  background-color: var(--fg);
+  color: var(--nav-background);
+  background-color: var(--green);
+  margin: 0 14px;
 }
 
-.content {
-  margin: 100px 0 0 300px;
+/* contact container */
+.contact-container {
+  display: grid;
+  width: min(50%, 55rem);
+  padding-top: 6rem;
+  margin-inline: auto;
+}
+
+.contact {
+  font-size: 0.8125rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px #000000;
+}
+
+.flex {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: var(--ff-primary);
+}
+
+/* contact background */
+.bg-primary {
+  background: var(--bg-primary);
+}
+
+/* contact font color */
+.text-primary {
+  color: var(--fc-primary);
+}
+
+.contact .name {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--ff-primary);
+  text-align: center;
+}
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0,0,0,0);
+  outline: none;
+  background-color: var(--fc-primary);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.send {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--brown);
+  color: var(--fc-primary);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

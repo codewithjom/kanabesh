@@ -61,10 +61,6 @@ img {
   margin-right: 30px;
 }
 
-/* plants 
-#plant {}
-*/
-
 /* container inside the navigation bar */
 .container {
   max-width: 700px;
@@ -113,14 +109,6 @@ img {
   color: var(--nav-background);
   background-color: var(--green);
   margin: 0 14px;
-}
-
-/* background video */
-.background {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 /* marketplace grid layout */
